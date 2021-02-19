@@ -2,3 +2,4 @@ mod s0001_two_sum;
 mod s0002_add_two_numbers;
 mod s0094_binary_tree_inorder_traversal;
 mod s0098_validate_binary_search_tree;
+mod s0912_sort_an_array;
