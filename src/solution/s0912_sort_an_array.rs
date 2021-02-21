@@ -1,4 +1,4 @@
-use std::fmt::Debug;
+use std::fmt::{Debug, Display};
 use std::mem::swap;
 
 /**
@@ -186,6 +186,15 @@ fn q_sort<T: Ord + Debug>(slice: &mut [T]) {
     q_sort(&mut r_slice[1..]);
 }
 
+struct NoDisplay {
+name: u32
+}
+
+fn area<T: std::ops::Mul<Output = T> + Copy>(r: T) -> T {
+    r * r
+}
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -238,5 +247,13 @@ mod tests {
         let mut nums = vec![5, 1, 1, 2, 0, 0];
         QuickSort.sort(&mut nums);
         assert_eq!(nums, vec![0, 0, 1, 1, 2, 5]);
+    }
+
+    #[test]
+    fn test_stuff() {
+        println!("{}", area(3));
+        println!("{}", area(3.2));
+        let nd = NoDisplay{name:10};
+        println!("{}", area(nd));
     }
 }
