@@ -7,3 +7,4 @@ mod s0110_balanced_binary_tree;
 mod s0697_degree_of_an_array;
 mod s0766_toeplitz_matrix;
 mod s0912_sort_an_array;
+mod s1052_grumpy_bookstore_owner;
