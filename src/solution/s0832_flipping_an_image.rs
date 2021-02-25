@@ -43,10 +43,7 @@ pub struct Solution {}
 impl Solution {
     pub fn flip_and_invert_image(a: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
         let mut result = a;
-        let (n, m) = (
-            result.len(),
-            result.first().map_or(0, |row| row.len()) as usize,
-        );
+        let m = result.first().map_or(0, |row| row.len()) as usize;
         for row in &mut result {
             let (mut l, mut r) = (0, m - 1);
             while l < r {
